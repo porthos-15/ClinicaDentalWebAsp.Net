@@ -1,0 +1,33 @@
+﻿@model ClinicaDental01.Models.UpdateCitaViewModel
+
+@{
+}
+
+<h1 style="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+    Actualizar Cita
+</h1>
+
+<form method="post" action="UpdateCita" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="IdCita" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha</label>
+        <input type="date" class="form-control" asp-for="FechaCita">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" asp-for="DescripcionCita">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="EliminarCita" asp-controller="Cita">Eliminar</button>
+</form>

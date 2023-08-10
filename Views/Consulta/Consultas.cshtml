@@ -1,0 +1,79 @@
+﻿@model List<ClinicaDental01.Models.Domain.Consulta>
+@{
+}
+<img width="50" height="50" style="float: left;" src="~/img/dentista-Consulta.png">
+<h1 style="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+	Consultas
+</h1>
+
+
+<h1 style="color: #0CAFFF; text-align=right; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+	Actualizar Consulta
+</h1>
+<div>
+	<img width="70" height="70" style="float: right;" src="~/img/icons-refresh.png">
+</div>
+<br />
+<br />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Fecha</th>
+			<th>Nombre Paciente</th>
+			<th>Médico de Cabecera</th>
+			<th>Tipo de Sangre</th>
+			<th>En caso de emergencia llamar</th>
+			<th>Queja Principal</th>
+			<th>Presion Arterial</th>
+			<th>Pulso</th>
+			<th>Frecuencia Respiratoria</th>
+			<th>Estatura</th>
+			<th>Peso</th>
+			<th>Temperatura</th>
+			<th>Antecedentes Alérgicos</th>
+			<th>Antecedente Quirúrgicos</th>
+			<th>Medicamos</th>
+			<th>Antecedentes Patológicos</th>
+			<th>Historial Dental</th>
+			<th>Tejidos Blandos</th>
+			<th>Examen Extraoral</th>
+			<th>Plan de Tratamiento</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var Consulta in Model)
+		{
+			<tr>
+				<td>@Consulta.IdConsulta</td>
+				<td>@Consulta.FechaConsulta.ToString("dd-MM-yyyy")</td>
+				<td>@Consulta.PacienteConsulta</td>
+				<td>@Consulta.MedicoCabecera</td>
+				<td>@Consulta.TipoSangre</td>
+				<td>@Consulta.EmergenciaLlamar</td>
+				<td>@Consulta.QuejaPrincipal</td>
+				<td>@Consulta.PresionArterial</td>
+				<td>@Consulta.Pulso</td>
+				<td>@Consulta.FrecuenciaRespiratoria</td>
+				<td>@Consulta.Estatura</td>
+				<td>@Consulta.Peso</td>
+				<td>@Consulta.Temperatura</td>
+				<td>@Consulta.AntecedentesAlergicos</td>
+				<td>@Consulta.AntecedentesQuirurjicos</td>
+				<td>@Consulta.MedicamentosToma</td>
+				<td>@Consulta.AntecedentesPatologicos</td>
+				<td>@Consulta.HistorialDental</td>
+				<td>@Consulta.TejidosBlandos</td>
+				<td>@Consulta.ExamenExtraoral</td>
+				<td>@Consulta.PlanTratamiento</td>
+				<td>@Consulta.PlanTratamiento</td>
+
+				<td><a href="/Consulta/UpdateConsulta/@Consulta.IdConsulta">Editar</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

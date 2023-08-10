@@ -1,0 +1,311 @@
+﻿@model ClinicaDental01.Models.UpdatePacienteViewModel
+
+@{
+}
+<h1 style ="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; " >Actualizar Paciente</h1>
+<div>
+    <img width="100" height="100"  style="float: right;"   src="~/img/icons-refresh.png">
+</div>
+<br />
+
+<form method="post" action="UpdatePaciente" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="IdPaciente" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Cedula</label>
+        <input type="text" class="form-control" asp-for="CedulaPaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="NombrePaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Primer Apellido</label>
+        <input type="text" class="form-control" asp-for="PrimerApellidoPaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Segundo Apellido</label>
+        <input type="text" class="form-control" asp-for="SegundoApellidoPaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Correo</label>
+        <input type="email" class="form-control" asp-for="CorreoPaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Telefono</label>
+        <input type="text" class="form-control" asp-for="TelefonoPaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" asp-for="FechaNacimientoPaciente">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Direccion</label>
+        <input type="text" class="form-control" asp-for="DireccionPaciente">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Sexo</label>
+        <input type="text" class="form-control" asp-for="Sexo">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Estado Civil</label>
+        <input type="text" class="form-control" asp-for="EstadoCivilPaciente">
+    </div>
+
+
+
+    
+	<h2>Hábitos</h2>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="SuccionDeDedo">
+		<label class="form-check-label" asp-for="SuccionDeDedo">
+			Succión de dedo
+		</label>
+	</div>
+
+
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ChuponOChupeta">
+		<label class="form-check-label" asp-for="ChuponOChupeta">
+			Chupón o chupeta
+		</label>
+	</div>
+
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="DuermeConBocaAbiertaOCerrada">
+		<label class="form-check-label" asp-for="DuermeConBocaAbiertaOCerrada">
+			Duerme con boca abierta o cerrada
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ComeMuerdeObjetos">
+		<label class="form-check-label" asp-for="ComeMuerdeObjetos">
+			Come muerde objetos
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ApoyalaManoSobreLaBarbilla">
+		<label class="form-check-label" asp-for="ApoyalaManoSobreLaBarbilla">
+			Apoya la mano sobre la barbilla
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="RastrillaLosDientes">
+		<label class="form-check-label" asp-for="RastrillaLosDientes">
+			Rastrilla los dientes
+		</label>
+	</div>
+
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="SacaLaLenguaOTieneLenguaProtractil">
+		<label class="form-check-label" asp-for="SacaLaLenguaOTieneLenguaProtractil">
+			Saca la lengua o tiene lengua protráctil
+		</label>
+	</div>
+
+
+	<h2> Historia médica</h2>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="EnfermedadesCardiacas">
+		<label class="form-check-label" asp-for="EnfermedadesCardiacas">
+			Enfermedades cardiacas
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ProblemasDeLaPresionArterial">
+		<label class="form-check-label" asp-for="ProblemasDeLaPresionArterial">
+			Problemas de la presión arterial
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="DiabetesTipo1">
+		<label class="form-check-label" asp-for="DiabetesTipo1">
+			Diabetes tipo 1
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="DiabetesTipo2">
+		<label class="form-check-label" asp-for="DiabetesTipo2">
+			Diabetes tipo 2
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="FiebreReumAtica">
+		<label class="form-check-label" asp-for="FiebreReumAtica">
+			Fiebre reumática
+		</label>
+	</div>
+
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="VIHOSIDA ">
+		<label class="form-check-label" asp-for="VIHOSIDA ">
+			VIH o SIDA
+		</label>
+
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ProblemasEnLosRinones">
+		<label class="form-check-label" asp-for="ProblemasEnLosRinones">
+			Problemas en los riñones
+		</label>
+
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ProblemasDeVision">
+		<label class="form-check-label" asp-for="ProblemasDeVision">
+			Problemas de visión
+		</label>
+
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ProblemasDeMareos">
+		<label class="form-check-label" asp-for="ProblemasDeMareos">
+			Problemas de mareos
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ProblemasDeLaTiroides ">
+		<label class="form-check-label" asp-for="ProblemasDeLaTiroides ">
+			Problemas de la tiroides
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ProblemasGastrointestinales">
+		<label class="form-check-label" asp-for="ProblemasGastrointestinales">
+			Problemas Gastrointestinales
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="Alergia">
+		<label class="form-check-label" asp-for="Alergia">
+			Alergia
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="EnfermedadDeTransmisionSexual">
+		<label class="form-check-label" asp-for="EnfermedadDeTransmisionSexual">
+			Enfermedad de transmisión sexual
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="Osteoporosis">
+		<label class="form-check-label" asp-for="Osteoporosis">
+			Osteoporosis
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="DueleAlAbrirOCerrarLaBoca">
+		<label class="form-check-label" asp-for="DueleAlAbrirOCerrarLaBoca">
+			Duele al abrir o cerrar la boca
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="Fuma">
+		<label class="form-check-label" asp-for="Fuma">
+			Fuma
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="TomaLicor">
+		<label class="form-check-label" asp-for="TomaLicor">
+			Toma licor
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="TratamientoAnticonceptivo">
+		<label class="form-check-label" asp-for="TratamientoAnticonceptivo">
+			Tratamiento anticonceptivo
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="EstaOcreeEstarEmbarazada">
+		<label class="form-check-label" asp-for="EstaOcreeEstarEmbarazada">
+			Esta o cree estar embarazada
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="TratamientoPsiquiatrico">
+		<label class="form-check-label" asp-for="TratamientoPsiquiatrico">
+			Tratamiento psiquiátrico
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="VirusDelHerpes ">
+		<label class="form-check-label" asp-for="VirusDelHerpes ">
+			Virus del herpes
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="EpilepsiaDesmayoConvulsiones">
+		<label class="form-check-label" asp-for="EpilepsiaDesmayoConvulsiones">
+			Epilepsia, desmayo, convulsiones
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="AparicionDeEquimosisOMoretes ">
+		<label class="form-check-label" asp-for="AparicionDeEquimosisOMoretes ">
+			Aparición de equimosis o moretes
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="ShockAnafilactico">
+		<label class="form-check-label" asp-for="ShockAnafilactico">
+			Shock anafiláctico
+		</label>
+	</div>
+
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" asp-for="Hepatitis">
+		<label class="form-check-label" asp-for="Hepatitis">
+			Hepatitis
+		</label>
+	</div>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="EliminarPaciente" asp-controller="Paciente">Eliminar</button>
+</form>

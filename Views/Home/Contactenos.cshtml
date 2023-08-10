@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Contactenenos";
+    Layout = "/Views/Shared/_LayoutVacio.cshtml";
+}
+
+
+
+<head>
+    <meta charset="utf-8">
+    <title style="color: #0CAFFF; text-align:center; font-weight: bold; margin-top: 35px;
+    width: 100%; ">Clinica dental test</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                         <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>8890 6159</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>rosbendental@hotmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                       <a class="text-body px-2" href="https://www.facebook.com/rosbendental/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                       
+                        
+                        <a class="text-body px-2" href="https://www.instagram.com/dr.andresdentista/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm mb-5">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index2">
+                    <h1 class="m-0 text-uppercase text-primary  "><i class="fa fa-clinic-medical me-2 "></i>Clinica dental Rosben  </h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+
+                        <a class="nav-item nav-link" asp-area="" asp-controller="Home" asp-action="Acerca">Acerca</a>
+
+                        <a  class="nav-item nav-link"  asp-controller="Home" asp-action="Contactenos">Contactenos</a>
+
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Servicio" asp-action="Servicios">Lista Servicios</a>
+
+                        <partial name="_LoginPartial" />
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <h1>@ViewData["Title"]</h1>
+
+   
+     <div id="contactenos" class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Contactenos</h4>
+                    <p class="mb-4">Clínica dental encargada de darle al paciente la más alta atención personalizada
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>De la Pizza Hut de Paseo Colón, 200 metros Norte, Edificio esquinero María Luisa, color azul., San José, Costa Rica   </p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>rosbendental@hotmail.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+506 8890 6159</p>
+                </div>
+
+                    
+                    <div class="d-flex">
+
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com/rosbendental/"><i class="fab fa-facebook-f"></i></a>
+
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.instagram.com/dr.andresdentista/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+          

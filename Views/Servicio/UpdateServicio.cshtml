@@ -1,0 +1,35 @@
+﻿@model ClinicaDental01.Models.UpdateServicioViewModel
+
+@{
+}
+
+<h1 style ="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; " >Actualizar Servicio</h1>
+
+<form method="post" action="UpdateServicio" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="IdServicio" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="NombreServicio">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" asp-for="DescripcionServicio">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Costo</label>
+        <input type="text" class="form-control" asp-for="CostoServicio">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="EliminarServicio" asp-controller="Servicio">Eliminar</button>
+</form>

@@ -1,0 +1,41 @@
+﻿@model List<ClinicaDental01.Models.Domain.Cita>
+@{
+}
+<img width="50" height="50" style="float: left;" src="~/img/dentista-Cita.png">
+<h1 style="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+	Citas
+</h1>
+
+
+<h1 style="color: #0CAFFF; text-align=right; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+	Actualizar Cita
+</h1>
+<div>
+	<img width="70" height="70" style="float: right;" src="~/img/icons-refresh.png">
+</div>
+<br />
+<br />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Fecha</th>
+			<th>Descripcion</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var Cita in Model)
+		{
+			<tr>
+				<td>@Cita.IdCita</td>
+				<td>@Cita.FechaCita.ToString("dd-MM-yyyy")</td>
+				<td>@Cita.DescripcionCita</td>
+
+				<td><a href="/Cita/UpdateCita/@Cita.IdCita">Editar</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

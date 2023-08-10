@@ -1,0 +1,54 @@
+﻿@model List<ClinicaDental01.Models.Domain.Paciente>
+@{
+}
+<img width="50" height="50" style="float: left;" src="~/img/dentista-paciente.png">
+<h1 style="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+	Pacientes
+</h1>
+
+
+<h1 style="color: #0CAFFF; text-align=right; font-weight: bold; margin-top: 35px;
+    width: 100%; ">
+	Actualizar Paciente
+</h1>
+<div>
+	<img width="70" height="70" style="float: right;" src="~/img/icons-refresh.png">
+</div>
+<br />
+<br />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Cedula</th>
+			<th>Nombre</th>
+			<th>Correo</th>
+			<th>Telefono </th>
+			<th>Direccion</th>
+			<th>Fecha de nacimiento</th>
+			<th>Sexo</th>
+			<th>Estado Civil</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var paciente in Model)
+		{
+			<tr>
+				<td>@paciente.IdPaciente</td>
+				<td>@paciente.CedulaPaciente</td>
+				<td>@paciente.FullName.ToString()</td>
+				<td>@paciente.CorreoPaciente</td>
+				<td>@paciente.TelefonoPaciente</td>
+				<td>@paciente.DireccionPaciente</td>
+				<td>@paciente.FechaNacimientoPaciente.ToString("dd-MM-yyyy")</td>
+				<td>@paciente.Sexo</td>
+				<td>@paciente.EstadoCivilPaciente</td>
+
+				<td><a href="/Paciente/UpdatePaciente/@paciente.IdPaciente">Editar</a></td>
+				<td><a href="/Paciente/VerHistorial/@paciente.IdPaciente">Historial Medico</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,119 @@
+﻿@model ClinicaDental01.Models.UpdateConsultaViewModel
+@{
+}
+
+<h1 style ="color: #0CAFFF; text-align=center; font-weight: bold; margin-top: 35px;
+    width: 100%; " >Update Consulta</h1>
+<div>
+    <img width="100" height="100"  style="float: right;"   src="~/img/diente-feliz.png">
+</div>
+<br />
+<br/>
+<form method="post" action="UpdateConsulta" class="mt-5">
+
+
+    <div class="mb-3">
+        <label style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Fecha</label>
+        <input type="date" class="form-control" asp-for="FechaConsulta">
+    </div>
+
+    <div class="mb-3">
+        <label style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Paciente</label>
+        <input type="text" class="form-control" asp-for="PacienteConsulta">
+    </div>
+
+    <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Medico de Cabecera</label>
+        <input type="text" class="form-control" asp-for="MedicoCabecera">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Tipo de Sangre</label>
+        <input type="text" class="form-control" asp-for="TipoSangre">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">En caso de emergecias llamar a</label>
+        <input type="text" class="form-control" asp-for="EmergenciaLlamar">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Queja Principal</label>
+        <input type="text" class="form-control" asp-for="QuejaPrincipal">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Presion Arterial</label>
+        <input type="text" class="form-control" asp-for="PresionArterial">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Pulso</label>
+        <input type="text" class="form-control" asp-for="Pulso">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Frecuencia Respiratoria</label>
+        <input type="text" class="form-control" asp-for="FrecuenciaRespiratoria">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Estatura</label>
+        <input type="text" class="form-control" asp-for="Estatura">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Peso</label>
+        <input type="text" class="form-control" asp-for="Peso">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Temperatura</label>
+        <input type="text" class="form-control" asp-for="Temperatura">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Antecedentes Alergicos</label>
+        <input type="text" class="form-control" asp-for="AntecedentesAlergicos">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Antecedentes Quirurgicos</label>
+        <input type="text" class="form-control" asp-for="AntecedentesQuirurjicos">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Toma Medicamentos</label>
+        <input type="text" class="form-control" asp-for="MedicamentosToma">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Antecedentes Patologicos</label>
+        <input type="text" class="form-control" asp-for="AntecedentesPatologicos">
+    </div>
+
+        <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Historial Dental</label>
+        <input type="text" class="form-control" asp-for="HistorialDental">
+    </div>
+
+            <div class="mb-3">
+        <label  style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Tejidos Blandos</label>
+        <input type="text" class="form-control" asp-for="TejidosBlandos">
+    </div>
+
+    <div class="mb-3">
+        <label style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Examen Extraoral</label>
+        <input type="text" class="form-control" asp-for="ExamenExtraoral">
+    </div>
+
+    <div class="mb-3">
+        <label style="font-size: 16px;  font-weight: bold;" for="" class="form-label">Plan de Tratamiento</label>
+        <input type="text" class="form-control" asp-for="PlanTratamiento">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="EliminarConsulta" asp-controller="Consulta">Eliminar</button>
+</form>
